@@ -22,6 +22,7 @@ body {
   padding: 0 20px;
 }
 
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -197,6 +198,7 @@ body {
   z-index: 1;
 }
 
+
 /* Floating Avatars */
 .avatar {
   position: absolute;
@@ -204,7 +206,7 @@ body {
   height: 44px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 5;
 }
 
@@ -214,10 +216,29 @@ body {
   object-fit: cover;
 }
 
-.avatar-1 { top: 90px; left: 45px; border: 3px solid #13b5cc; }
-.avatar-2 { top: 15px; right: 40px; border: 3px solid #ff5e94; }
-.avatar-3 { bottom: 170px; left: 10px; border: 3px solid #13b5cc; }
-.avatar-4 { bottom: 10px; right: 140px; border: 3px solid #f08218; }
+.avatar-1 {
+  top: 90px;
+  left: 45px;
+  border: 3px solid #13b5cc;
+}
+
+.avatar-2 {
+  top: 15px;
+  right: 40px;
+  border: 3px solid #ff5e94;
+}
+
+.avatar-3 {
+  bottom: 170px;
+  left: 10px;
+  border: 3px solid #13b5cc;
+}
+
+.avatar-4 {
+  bottom: 10px;
+  right: 140px;
+  border: 3px solid #f08218;
+}
 
 /* Decorative Paw Icons */
 .paw {
@@ -226,13 +247,35 @@ body {
   animation: floatPaw 3s ease-in-out infinite alternate;
 }
 
-.paw-purple { top: 25px; right: 170px; color: #c090ff; font-size: 32px; }
-.paw-pink { bottom: 160px; right: -15px; color: #ff5e94; font-size: 36px; }
-.paw-orange { bottom: 120px; left: 170px; color: #ff9100; font-size: 38px; }
+.paw-purple {
+  top: 25px;
+  right: 170px;
+  color: #c090ff;
+  font-size: 32px;
+}
+
+.paw-pink {
+  bottom: 160px;
+  right: -15px;
+  color: #ff5e94;
+  font-size: 36px;
+}
+
+.paw-orange {
+  bottom: 120px;
+  left: 170px;
+  color: #ff9100;
+  font-size: 38px;
+}
 
 @keyframes floatPaw {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Services Section Exact Design */
@@ -278,7 +321,7 @@ body {
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
 }
 
 .card-cyan {
@@ -302,6 +345,178 @@ body {
   color: #1a1a1a;
   font-weight: 600;
 }
+
+
+/* --- ABOUT / QUOTE SECTION (YANGI STYLE) --- */
+.about-quote-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Image Wrapper and Blob Background */
+.about-image-wrapper {
+  position: relative;
+  width: 480px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-blob {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background-color: #e3f0f7;
+  border-radius: 60% 40% 50% 50% / 40% 50% 50% 60%;
+  z-index: 1;
+}
+
+.about-dog-img {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Icons around the blob */
+.blob-paw {
+  position: absolute;
+  color: #a7c5d4;
+  z-index: 2;
+}
+
+.blob-paw.p1 {
+  top: 70px;
+  right: 120px;
+  font-size: 24px;
+  transform: rotate(15deg);
+}
+
+.blob-paw.p2 {
+  top: 160px;
+  left: 40px;
+  font-size: 22px;
+  transform: rotate(-20deg);
+}
+
+.blob-paw.p3 {
+  top: 170px;
+  right: 90px;
+  font-size: 20px;
+  transform: rotate(10deg);
+}
+
+.blob-bone {
+  position: absolute;
+  left: 50px;
+  bottom: 130px;
+  color: #a7c5d4;
+  font-size: 24px;
+  z-index: 2;
+  transform: rotate(-15deg);
+}
+
+.blob-bowl {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0d4b56;
+  font-size: 36px;
+  z-index: 2;
+}
+
+/* Play Badge Overlay */
+.play-badge {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 110px;
+  height: 110px;
+  background-color: #0d4b56;
+  border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 3;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(13, 75, 86, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.play-badge:hover {
+  transform: scale(1.05);
+}
+
+.play-btn {
+  width: 38px;
+  height: 38px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.play-btn i {
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+.play-badge span {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Right Content Area */
+.about-content {
+  max-width: 500px;
+  position: relative;
+}
+
+.top-paw-icon {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  font-size: 50px;
+  color: #0d4b56;
+  opacity: 0.8;
+}
+
+.about-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.about-content .btn-primary {
+  padding: 12px 30px;
+  border-radius: 6px;
+}
+
 
 /* Products Section */
 .products-section {
@@ -366,10 +581,21 @@ body {
   transform: scale(1.08);
 }
 
-.bg-pink   { background-color: #ffd6e0; }
-.bg-yellow { background-color: #fff3bf; }
-.bg-blue   { background-color: #d0ebff; }
-.bg-purple { background-color: #d1c0e8; }
+.bg-pink {
+  background-color: #ffd6e0;
+}
+
+.bg-yellow {
+  background-color: #fff3bf;
+}
+
+.bg-blue {
+  background-color: #d0ebff;
+}
+
+.bg-purple {
+  background-color: #d1c0e8;
+}
 
 .product-card h3 {
   font-size: 16px;
@@ -531,7 +757,8 @@ body {
   gap: 30px;
 }
 
-.social-column h4, .info-box h4 {
+.social-column h4,
+.info-box h4 {
   font-size: 14px;
   margin-bottom: 15px;
 }
@@ -608,6 +835,127 @@ body {
   color: #0d4b56;
 }
 
+/* Hero Section with Quote and Image */
+.hero-section {
+  background-color: #f4faf9;
+  padding: 60px 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Chap taraf matnlari */
+.content-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Tugma dizayni */
+.btn-explore {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-explore button {
+  background-color: #174f62;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  boder-radius
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-explore button:hover {
+  background-color: #0f3745;
+}
+
+.btn-explore button i {
+  font-size: 12px;
+}
+
+/* O'ng taraf (Rasm va Ikonkalar) */
+.content-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.main-img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Fon ikonkalari uchun umumiy stil */
+.bg-icon {
+  position: absolute;
+  color: #8cd6e6;
+  font-size: 32px;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Ikonkalarning aniq pozitsiyalari */
+.icon-paw {
+  top: 10%;
+  left: 15%;
+  font-size: 40px;
+  transform: rotate(-15deg);
+}
+
+.icon-ball {
+  bottom: 35%;
+  left: 10%;
+  font-size: 36px;
+}
+
+.icon-collar {
+  top: 30%;
+  right: 15%;
+  font-size: 34px;
+  transform: rotate(15deg);
+}
+
+.icon-bone {
+  bottom: 15%;
+  right: 20%;
+  font-size: 30px;
+  transform: rotate(-20deg);
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .hero-container {
@@ -615,15 +963,44 @@ body {
     text-align: center;
     gap: 40px;
   }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-paw-icon {
+    display: none;
+  }
+
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .products-grid, .cards-grid {
+
+  .products-grid,
+  .cards-grid {
     grid-template-columns: 1fr;
   }
+
   .navbar {
     flex-direction: column;
     gap: 15px;
+  }
+
+  /* Responsive Hero Section with Quote */
+  .hero-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-left {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .btn-explore button {
+    display: flex;
+    margin: 0 auto;
   }
 }
 
@@ -631,11 +1008,19 @@ body {
   .services-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .hero-image-wrapper {
+
+  .hero-image-wrapper,
+  .about-image-wrapper {
     width: 100%;
   }
+
   .blob-bg {
     width: 280px;
     height: 260px;
+  }
+
+  .blue-blob {
+    width: 280px;
+    height: 280px;
   }
 }
